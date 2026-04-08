@@ -48,7 +48,7 @@ def create_protobuf_message(user_id, region):
         message.uid = int(user_id)
         message.region = region
         if hasattr(message, 'ob_version'):
-            message.ob_version = "OB52"
+            message.ob_version = "OB53"
         return message.SerializeToString()
     except Exception as e:
         app.logger.error(f"Error creating protobuf message: {e}")
